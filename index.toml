@@ -1,6 +1,10 @@
 hash-format = "sha256"
 
 [[files]]
+file = ".github/workflows/pages.yml"
+hash = "bae63cc5c5fca7bd46c04a0a2faad41457458aaa1635dc4fb80d111a632680c5"
+
+[[files]]
 file = "bsl-shaders.pw.toml"
 hash = "6d9bbd7b23c083646f95290fdb247e84aa8c2ec96a23e625e73d504587a87547"
 metafile = true
@@ -7952,11 +7956,6 @@ metafile = true
 [[files]]
 file = "mods/advancedae.pw.toml"
 hash = "da0bc30581b206aee85540014b8c498e88cdd4a63ae24eee7c968ef1fc5adb5a"
-metafile = true
-
-[[files]]
-file = "mods/advancedperipherals.pw.toml"
-hash = "9c6079f512c55eb82f03317a2d40bef821e3d8c589d72c6659af6a39aab5923b"
 metafile = true
 
 [[files]]
