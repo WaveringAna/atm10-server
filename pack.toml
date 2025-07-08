@@ -1,0 +1,13 @@
+name = "AnaATMServer"
+author = "meowskullz"
+version = "4.2"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "7167783a39c79e1b563f6e31a2df10e266b4ac53485d6bbdfff50508522c2615"
+
+[versions]
+minecraft = "1.21.1"
+neoforge = "21.1.185"
