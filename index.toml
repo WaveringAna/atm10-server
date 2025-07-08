@@ -9857,11 +9857,6 @@ hash = "107b420afc69f871b5eda0d20032ee2c57a7282f8123495cc6e3c9877e500fd7"
 metafile = true
 
 [[files]]
-file = "mods/smithing-template-viewer.pw.toml"
-hash = "d57e8161eb21eaa4a1d3deac98926afda0f4d01cf891deee934868d1cac5dd74"
-metafile = true
-
-[[files]]
 file = "mods/sophisticated-backpacks-create-integration.pw.toml"
 hash = "60a635bba61a4b12183cee3678959c80091376ede9d310d6ec121c65085d3c89"
 metafile = true
