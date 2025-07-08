@@ -1,46 +1,44 @@
-# .github/workflows/pages.yml
-name: Deploy TOML to GitHub Pages
+name: Deploy whole-repo to GitHub Pages
 
 on:
-  push:
-    branches: [ "main" ]          # change if your default branch is different
-    paths:
-      - index.toml
-      - pack.toml
-      - .github/workflows/pages.yml
-  workflow_dispatch:              # allows manual runs from the Actions tab
+  push:                        # run for every change on the default branch
+    branches: [ "main" ]
+  workflow_dispatch:           # allow manual runs
 
-# Required so the deploy job can write to Pages & sign the deployment
-permissions:
-  contents: read                  # checkout
+permissions:                   # required for Pages OIDC & upload
+  contents: read
   pages:    write
-  id-token: write                 # OIDC for Pages
+  id-token: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repo
+      - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Stage the two TOML files
+      # Copy *everything* except the CI & VCS plumbing into ./site
+      - name: Stage site directory
         run: |
-          mkdir -p site
-          cp index.toml pack.toml site/
-          touch site/.nojekyll      # disables Jekyll so raw TOML is served
+          mkdir site
+          rsync -a --delete \
+                --exclude '.git*' \
+                --exclude '.github' \
+                ./ site/
+          touch site/.nojekyll        # disable Jekyll so raw files are served :contentReference[oaicite:0]{index=0}
 
-      - name: Upload Pages artifact
+      - name: Upload artifact for Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: site                # everything in site/ becomes the site root
+          path: site                  # full repo now lives in the artifact root :contentReference[oaicite:1]{index=1}
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
     environment:
-      name: github-pages           # created automatically on first run
+      name: github-pages
       url:  ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
-        id: deployment             # id needed for the url output above
-        uses: actions/deploy-pages@v4
+        id: deployment
+        uses: actions/deploy-pages@v4          # retrieves the artifact and publishes it
