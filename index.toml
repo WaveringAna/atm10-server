@@ -1,10 +1,6 @@
 hash-format = "sha256"
 
 [[files]]
-file = ".github/workflows/pages.yml"
-hash = "bae63cc5c5fca7bd46c04a0a2faad41457458aaa1635dc4fb80d111a632680c5"
-
-[[files]]
 file = "bsl-shaders.pw.toml"
 hash = "6d9bbd7b23c083646f95290fdb247e84aa8c2ec96a23e625e73d504587a87547"
 metafile = true
@@ -230,10 +226,6 @@ hash = "17db07e549f449b90c275eb326600016cfc4b7587f2757a9baaafe0923caa482"
 [[files]]
 file = "config/framedblocks-client.toml"
 hash = "1b0e96a995d9ede7a9ff4b6d2cd3f99817c50313a0de44cb97565b55a8a61e84"
-
-[[files]]
-file = "config/ftbquests/quests/README.md"
-hash = "d0e63efe1171561178387eea0c21960708ea4dd63e20d90c77b1c9697191b63f"
 
 [[files]]
 file = "config/ftbquests/quests/chapter_groups.snbt"
@@ -1226,10 +1218,6 @@ hash = "9143649c23ff2f0d1641e2ee0fda94c6a0726a138e2483fe2449624e52c740be"
 [[files]]
 file = "defaultconfigs/ftbultimine/ftbultimine-server.snbt"
 hash = "fdf30f6174021100e2c34e5599f8ae6a9914a4b0e7413c162d75cdfaafb22bab"
-
-[[files]]
-file = "kubejs/README.md"
-hash = "23b45d6c3c70309c53e50044884f9de0b6538a8e442f4be97c6654db7b6f67a9"
 
 [[files]]
 file = "kubejs/README.txt"
