@@ -1,44 +1,32 @@
-name: Deploy whole-repo to GitHub Pages
+# .github/workflows/pages.yml
+name: Pages deploy (whole repo)
 
-on:
-  push:                        # run for every change on the default branch
-    branches: [ "main" ]
-  workflow_dispatch:           # allow manual runs
+on:                     # run on every push to main or manually
+  push:
+    branches: [main]
+  workflow_dispatch:
 
-permissions:                   # required for Pages OIDC & upload
+permissions:
   contents: read
   pages:    write
-  id-token: write
+  id-token: write        # OIDC for Pages
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4   # full tree at $GITHUB_WORKSPACE
+        with:
+          fetch-depth: 1            # default; keeps clone fast:contentReference[oaicite:1]{index=1}
 
-      # Copy *everything* except the CI & VCS plumbing into ./site
-      - name: Stage site directory
-        run: |
-          mkdir site
-          rsync -a --delete \
-                --exclude '.git*' \
-                --exclude '.github' \
-                ./ site/
-          touch site/.nojekyll        # disable Jekyll so raw files are served :contentReference[oaicite:0]{index=0}
-
-      - name: Upload artifact for Pages
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: site                  # full repo now lives in the artifact root :contentReference[oaicite:1]{index=1}
+          path: .                  # root of the repo:contentReference[oaicite:2]{index=2}
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url:  ${{ steps.deployment.outputs.page_url }}
-    steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4          # retrieves the artifact and publishes it
+        uses: actions/deploy-pages@v4
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
