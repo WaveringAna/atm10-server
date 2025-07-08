@@ -7925,6 +7925,11 @@ hash = "4a538930e2c001ee1f0627f1a22608b976d8eba8814a0ca1d323865c15bca0e8"
 metafile = true
 
 [[files]]
+file = "mods/3dskinlayers.pw.toml"
+hash = "1ed9d54872a780939283c1f2d18475e48cf6e306931dd6c0f1ba2cef1017ab45"
+metafile = true
+
+[[files]]
 file = "mods/accelerated-decay.pw.toml"
 hash = "0c31f109b6c4dca94a153fbdd827bbd5f96149fd5c7863ba0ba41fcab801afe0"
 metafile = true
@@ -8157,11 +8162,6 @@ metafile = true
 [[files]]
 file = "mods/auroras.pw.toml"
 hash = "22523481b7a5b3be8e086462d6598a209d5ccdd3fea0c6a2c6384e9aa92b40ec"
-metafile = true
-
-[[files]]
-file = "mods/bad-wither-no-cookie-reloaded.pw.toml"
-hash = "c3233ab72a796b7a0fcea7fa22b88ef5ee0512daf3c767be4f88e6e4f30881b0"
 metafile = true
 
 [[files]]
@@ -8891,7 +8891,7 @@ metafile = true
 
 [[files]]
 file = "mods/im-fast.pw.toml"
-hash = "a7b43a5e9c934e22bebe3298ae5ec54bbf098f3506703a1581f901e6896797ff"
+hash = "474d64dba26d80c32a84ccdefc66d06dbf18503c17fe48927040fdf9026c5860"
 metafile = true
 
 [[files]]
@@ -9371,7 +9371,7 @@ metafile = true
 
 [[files]]
 file = "mods/more-overlays-updated.pw.toml"
-hash = "ba02e961978ec74a41219c7180890c3c9e11d39f556677846ec59b42145c3d67"
+hash = "aebb0584b057847e605301fac10e669613bf9c9215ed7cbe6f49e6047487c680"
 metafile = true
 
 [[files]]
@@ -9387,11 +9387,6 @@ metafile = true
 [[files]]
 file = "mods/mouse-tweaks.pw.toml"
 hash = "2bdee19bd39b4bd411d7c858a7978ca9d2bdda41c1cf15920ea6be0014663f79"
-metafile = true
-
-[[files]]
-file = "mods/mp-cct.pw.toml"
-hash = "ee9b005a1715f952896a548857463591c385d86242bf38494cdb2d50e7f7f4c3"
 metafile = true
 
 [[files]]
@@ -9456,7 +9451,7 @@ metafile = true
 
 [[files]]
 file = "mods/not-enough-animations.pw.toml"
-hash = "03a370e79fef40daca8af2df93bdb511862f6581847cc8fd15fd4c7b8f5b6699"
+hash = "357a22e9cc8fadd4a31868b4a23ced6abbdd095eafd1e92daf048807806474cf"
 metafile = true
 
 [[files]]
@@ -9870,11 +9865,6 @@ hash = "64faee9ca0fb7655cf90fde3e5abc93f38f43faf4fb3c6dd328ca90ce764c247"
 metafile = true
 
 [[files]]
-file = "mods/skin-layers-3d.pw.toml"
-hash = "846684882a9dacc23c4e89868dc1916b64d2931f82dd5eef342d064216ea56eb"
-metafile = true
-
-[[files]]
 file = "mods/smartbrainlib.pw.toml"
 hash = "107b420afc69f871b5eda0d20032ee2c57a7282f8123495cc6e3c9877e500fd7"
 metafile = true
@@ -9946,12 +9936,12 @@ metafile = true
 
 [[files]]
 file = "mods/structory-towers.pw.toml"
-hash = "95d2a8661f2cad12b56535cbc5761e0e1a4ea3364b5c2ef2ce695c15f7b6dea8"
+hash = "a0dbd38eace0a67288b27d2463d7383b4e28183f844bbf8521c505a932c41363"
 metafile = true
 
 [[files]]
 file = "mods/structory.pw.toml"
-hash = "dbb08b67a58ecaa67889a928e785b498e3aa6ccdbe6354c01d942bdb58a17327"
+hash = "9c5ef39a8ae37a70e5a9c689e5978b3bbdb22429056756ad7a25247fd6d95952"
 metafile = true
 
 [[files]]
